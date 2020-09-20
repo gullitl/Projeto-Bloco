@@ -14,8 +14,7 @@ namespace RedeSocial.Infraestrutura.EntityFramework.TypeConfigurations
             builder
                 .Property(x => x.Imagem)
                 .HasColumnName("src_img")
-                .HasColumnType("varchar")
-                .HasMaxLength(250);
+                .HasColumnType("varchar");
 
             builder
                 .HasKey(x => x.Id)
