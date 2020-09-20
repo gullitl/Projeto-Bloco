@@ -16,8 +16,7 @@ namespace RedeSocial.Infraestrutura.EntityFramework.Data
         }
 
         //Como é o BD?
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
+        //protected override void OnModelCreating(ModelBuilder modelBuilder) {
         //    modelBuilder.ApplyConfiguration(new PostEntityTypeConfiguration());
         //    modelBuilder.ApplyConfiguration(new ComentarioEntityTypeConfiguration());
         //}
@@ -31,7 +30,7 @@ namespace RedeSocial.Infraestrutura.EntityFramework.Data
         public DomainDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<DomainDbContext>();
-            optionsBuilder.UseMySQL("server=127.0.0.1; port=3306; database=WebApp; uid=root; password=#Fp31314");
+            optionsBuilder.UseMySQL("server=127.0.0.1; port=3306; database=redesocialdb; uid=root; password=#Fp31314");
 
             return new DomainDbContext(optionsBuilder.Options);
         }
